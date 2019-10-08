@@ -1,0 +1,6 @@
+sudo xboxdrv --silent
+
+then
+
+
+jstest /dev/input/js0

@@ -1,0 +1,17 @@
+This is distance detecting code for the Robotics team.
+
+distanceDetect.cpp is meant to be a .o file that will be incorporated with the main
+ code for the robot. It does not contain a main function.
+
+pose.cpp is a test program that has the same functionality as distanceDetect.cpp, but it
+ has its own main function.
+
+The only issue with this code is that it needs the OpenCV library and the arUco library(which is included in OpenCV
+ if you get the additional files when installing). Currently those libraries are not set up on here correctly. Once 
+ they are,  these two programs should work as intended.
+
+config.yml contains the calibration information for the Yilador HD 1080P webcam that was provided by Dr. Neubert.
+ This file is essential to correctly measuring distance. If a new/different camera is used, a new config.yml file
+ will have to be generated(OpenCV and arUco provide programs to achieve this). 
+
+**may need to create a CmakeList.txt file to compile correctly.

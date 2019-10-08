@@ -1,0 +1,28 @@
+//**Set up steps (run once at beginning)
+
+	//Set the pin numbers to variables
+		jetsonTX2GPIONumber BotHal = gpio394 ;     // Input Hall Effect Sensor (Bottom)(Pin 38)
+		jetsonTX2GPIONumber TopHal = gpio393 ; 	   // Input Hall Effect Sensor (Top)(Pin 40)
+		jetsonTX2GPIONumber Power = gpio388 ; 	   // Output Power (3.3V)(Pin 37)
+		//Use Pin 39 as ground
+
+	//export these pins to the system
+		gpioExport(BotHal);
+		gpioExport(TopHal);
+		gpioExport(Power);
+
+	//Tell the pins whether they are sending or recieving
+		gpioSetDirection(BotHal,inputPin);
+		gpioSetDirection(TopHal,inputPin);
+		gpioSetDirection(Power,outputPin);
+	
+	//instantiate the value variables for the pins
+		unsigned int bValue = low; (low == 0, high == 1, *defined in jetsonGPIO.h)
+		unsigned int tValue = low;
+		gpioSetValue(Power, on);
+
+//**Run in main loop
+
+	//Get the values from the pins
+		gpioGetValue(BotHal, &bValue);
+		gpioGetValue(TopHal, &tValue);
