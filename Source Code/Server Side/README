@@ -1,0 +1,12 @@
+server.h includes the basic libraries of c++ and things they needed for socket connection, also defines the port number 
+they will be talking over. this file also creates a list of functions used throughout the program.
+
+server.cpp contains the functions
+    connect- opens the socket, sets all the structure to null value adn then connects the socket to the port
+    clientconnect - connects the socket to the client
+    recieve- reads in the scoket and copies it over to a new buffer
+    send - sends the socket over the server
+    closeSockets- closes the socket
+
+testmain.cpp- is a test file to make sure the server.cpp was functioning probably by running some of the functions created
+   in server.cpp
