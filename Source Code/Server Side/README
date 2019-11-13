@@ -10,3 +10,6 @@ server.cpp contains the functions
 
 testmain.cpp- is a test file to make sure the server.cpp was functioning probably by running some of the functions created
    in server.cpp
+
+
+a good tutorial of socket file https://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/socket.html
